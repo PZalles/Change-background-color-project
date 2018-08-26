@@ -19,29 +19,31 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            box-shadow: 0 0 0 5px white;
+            border: 5px solid white;
+            cursor: pointer;
+            z-index: 1;
 
         }
 
-        .red.circle {
+        div.red {
             top: 30px;
             left: 30px;
             background-color: red;
         }
 
-        .green.circle {
+        div.green {
             top: 30px;
             right: 30px;
             background-color: green;
         }
 
-        .blue.circle {
+        div.blue {
             bottom: 30px;
             left: 30px;
             background-color: blue;
         }
 
-        .orange.circle {
+        div.orange {
             bottom: 30px;
             right: 30px;
             background-color: orange;
@@ -51,6 +53,45 @@
             background-color: grey;
             width: 100%;
             height: 100vh;
+            font-size: 100px;
+            transition: 0.5s;
+        }
+
+        p {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            color: white;
+            font-family: arial;
+            line-height: 100vh;
+            text-align: center;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        div.red:hover~.bg,
+        div.red:hover~.bg p.red {
+            background-color: red;
+            opacity: 1;
+        }
+
+        div.green:hover~.bg,
+        div.green:hover~.bg p.green {
+            background-color: green;
+            opacity: 1;
+        }
+
+        div.blue:hover~.bg,
+        div.blue:hover~.bg p.blue {
+            background-color: blue;
+            opacity: 1;
+        }
+
+        div.orange:hover~.bg,
+        div.orange:hover~.bg p.orange {
+            background-color: orange;
+            opacity: 1;
         }
     </style>
 </head>
